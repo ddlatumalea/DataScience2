@@ -1,6 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
 def KhansAlgo(graph):
     """Returns topological ordering of a directed acyclic graph"""
     G = graph.copy()
@@ -24,9 +25,10 @@ def KhansAlgo(graph):
         to_remove.clear()
 
     if G.edges:
-        return TypeError('Expects a directed acyclic graph.')
+        raise TypeError('Expects a directed acyclic graph.')
 
     return L
+
 
 if __name__ == '__main__':
     # instantiate directional grapph
